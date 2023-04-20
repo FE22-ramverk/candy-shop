@@ -11,7 +11,7 @@ const candyReducer = (state = candyStore, action) => {
         case "FILL_STOCK":
             return {
                 ...state,
-                candies: [...state.candies, ...action.payload]
+                candies: [...action.payload]
             }
         default:
             return state

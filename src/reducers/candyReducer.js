@@ -8,6 +8,13 @@ const candyReducer = (state = candyStore, action) => {
                 ...state,
                 cart: [...state.cart, action.payload]
             }
+        case "FILL_STOCK":
+            return {
+                ...state,
+                candies: [...state.candies, action.payload]
+            }
+        default:
+            return state
     }
 }
 export default candyReducer;

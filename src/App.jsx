@@ -4,18 +4,25 @@ import StartPage from './pages/StartPage'
 import Cart from './pages/Cart'
 import CandyInfo from './pages/CandyInfo'
 import Header from './Components/Header'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { fillStock } from './actions/candyActions'
 
 function App() {
   const dispatch = useDispatch();
+  const [candies, setCandies] = useState([]);
 
   useEffect(() => {
     fetch('https://majazocom.github.io/Data/candies.json')
-    .then(response => response.json())
-    .then(data => dispatch(fillStock(data)))
+      .then(response => response.json())
+      .then(data => setCandies(data))
   }, []);
+
+  useEffect(() => {
+    if (candies.length > 0) {
+      dispatch(fillStock(candies));
+    }
+  }, [candies])
 
   return (
     <>

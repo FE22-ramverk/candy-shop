@@ -1,0 +1,37 @@
+[{
+        "name": "Lollipop",
+        "price": 18,
+        "id": 1,
+        "img": ""
+    },
+    {
+        "name": "Gummies",
+        "price": 15,
+        "id": 2,
+        "img": ""
+    },
+    {
+        "name": "Licorice",
+        "price": 22,
+        "id": 3,
+        "img": ""
+    },
+    {
+        "name": "Sours",
+        "price": 16,
+        "id": 4,
+        "img": ""
+    },
+    {
+        "name": "Chewing Gum",
+        "price": 10,
+        "id": 5,
+        "img": ""
+    },
+    {
+        "name": "Chocolate",
+        "price": 23,
+        "id": 6,
+        "img": ""
+    }
+]

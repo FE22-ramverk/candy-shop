@@ -23,7 +23,10 @@ function StartPage() {
     return (
         <main>
             <p>STARTPAGE</p>
-            <label>SÖK</label><input onChange={(e) => handleSearchInput(e.target.value)}></input>
+            <section>
+                <label>SÖK</label>
+                <input onChange={(e) => handleSearchInput(e.target.value)}></input>
+            </section>
             {
                 candies &&
                 candies.map((candy) => <CandyCard key={candy.id} candy={candy} />)

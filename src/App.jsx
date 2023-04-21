@@ -26,8 +26,8 @@ function App() {
 
   return (
     <>
-      <Header />
       <BrowserRouter>
+        <Header />
         <Routes>
           <Route index element={<StartPage />} />
           <Route path='/candyinfo/:id' element={<CandyInfo />} />

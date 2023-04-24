@@ -1,0 +1,22 @@
+@import "../variables";
+
+.header {
+    background-color: $primaryPink;
+    position: sticky;
+    top: 0;
+    padding: 0.5rem 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: '. h1 icon';
+    align-items: center;
+    box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.094);
+    h1 {
+        @include reset-user-agent-margins;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.224);
+        grid-area: h1;
+        color: white;
+    }
+    .link {
+        grid-area: icon;
+    }
+}

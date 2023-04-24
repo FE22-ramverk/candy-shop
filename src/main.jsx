@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
-import './index.css'
+import './index.scss'
 import { legacy_createStore as createStore } from 'redux'
 import candyReducer from './reducers/candyReducer'
 import { Provider } from 'react-redux'

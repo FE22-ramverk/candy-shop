@@ -22,7 +22,6 @@ function StartPage() {
     };
     return (
         <main>
-            <p>STARTPAGE</p>
             <section>
                 <label>SÖK</label>
                 <input onChange={(e) => handleSearchInput(e.target.value)}></input>

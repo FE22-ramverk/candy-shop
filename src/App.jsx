@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import './App.css'
+import './App.scss'
 import StartPage from './pages/StartPage'
 import Cart from './pages/Cart'
 import CandyInfo from './pages/CandyInfo'
@@ -22,7 +22,7 @@ function App() {
     if (candies.length > 0) {
       dispatch(fillStock(candies));
     }
-  }, [candies])
+  }, [candies]);
 
   return (
     <>
@@ -36,6 +36,6 @@ function App() {
       </BrowserRouter>
     </>
   )
-}
+};
 
-export default App
+export default App;

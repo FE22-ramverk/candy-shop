@@ -1,0 +1,30 @@
+
+@import "../variables";
+
+.header { 
+    position: sticky;
+    top: 0;
+    background-color: $primaryPink;
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    padding: 1rem;
+    box-shadow: 2px 3px 8px #0000004d;
+    h1 {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        color: white;
+    }
+    a{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        img {
+            align-self: flex-end;
+            margin-right: 0.7rem;
+        }
+    }
+    * {
+        flex-basis: 100%;
+    }
+}

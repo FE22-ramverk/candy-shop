@@ -1,0 +1,45 @@
+.hero {
+    width: 100%;
+}
+
+.searchInput {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    margin-top: 1rem;
+
+    input {
+        background-image: url('./SVG/searchborder.svg');
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        border: none;
+        background-color: transparent;
+        font-size: 14px;
+        padding: 1rem;
+
+        :focus-visible {
+            outline: none;
+        }
+    }
+
+    * {
+        flex-basis: 100%;
+    }
+
+    *:focus {
+        outline: none;
+    }
+
+    figure {
+        img {
+            margin-right: 100%;
+            margin-top: 0.7rem;
+            margin-left: 3%;
+        }
+    }
+}
+
+.candyCards {
+    padding: 1rem;
+}

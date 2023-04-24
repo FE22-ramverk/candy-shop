@@ -1,6 +1,8 @@
+import style from "./Button.module.scss";
+
 function Button({title, action}) {
     return ( 
-        <button onClick={action}>{title}</button>
+        <button className={style.button} onClick={action}>{title}</button>
      );
 }
 

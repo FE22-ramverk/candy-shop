@@ -7,3 +7,7 @@ $primaryBlue: #4cbbb9;
     margin-inline-start: 0;
     margin-inline-end: 0;
 }
+
+@mixin box-shadowing {
+    box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.094);
+}

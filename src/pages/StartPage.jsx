@@ -23,14 +23,15 @@ function StartPage() {
     };
     return (
         <main className={style.main}>
-            <section>
-                <label>SÖK</label>
-                <input onChange={(e) => handleSearchInput(e.target.value)}></input>
+            <section className={style.searchContainer}>
+                <input placeholder='search candy...' onChange={(e) => handleSearchInput(e.target.value)}></input>
             </section>
-            {
-                candies &&
-                candies.map((candy) => <CandyCard key={candy.id} candy={candy} />)
-            }
+            <section className={style.candyCards}>
+                {
+                    candies &&
+                    candies.map((candy) => <CandyCard key={candy.id} candy={candy} />)
+                }
+            </section>
         </main>
     );
 }

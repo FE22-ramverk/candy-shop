@@ -1,0 +1,11 @@
+@import "../variables";
+
+.button {
+    background-color: $primaryBlue;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    @include box-shadowing;
+    padding: 0.2rem 0.4rem;
+}

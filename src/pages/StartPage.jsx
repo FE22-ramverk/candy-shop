@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import CandyCard from '../Components/CandyCard';
 import { useEffect, useState } from 'react';
+import style from './StartPage.module.scss';
 
 function StartPage() {
     const [candies, setCandies] = useState([]);
@@ -21,7 +22,7 @@ function StartPage() {
         setCandies(filteredCandies);
     };
     return (
-        <main>
+        <main className={style.main}>
             <section>
                 <label>SÖK</label>
                 <input onChange={(e) => handleSearchInput(e.target.value)}></input>

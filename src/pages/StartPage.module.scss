@@ -1,0 +1,11 @@
+.main {
+    padding-top: 1rem;
+    section {
+        input {
+            background-image: url('./SVG/searchborder.svg');
+            background-size: contain;
+            background-position: center center;
+            border: none;
+        }
+    }
+}

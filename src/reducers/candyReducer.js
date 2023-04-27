@@ -39,7 +39,7 @@ const candyReducer = (state = candyStore, action) => {
             let setAmountCandy = action.payload.candy;
             setAmountCandy.amount = parseInt(action.payload.amount); 
             if (!setAmountCandy.amount) {
-                setAmountCandy.amount = 0;
+                setAmountCandy.amount = 1;
             }
             let setAmountCandyIndex = cart.findIndex((item) => item.id === setAmountCandy.id);
             cart.splice(setAmountCandyIndex, 1, setAmountCandy);

@@ -35,6 +35,16 @@ const candyReducer = (state = candyStore, action) => {
                 ...state,
                 cart: [...cart]
             }
+        case "MANUALLY_SET_AMOUNT":
+            console.log(action.payload);
+            let setAmountCandy = action.payload.candy;
+            setAmountCandy.amount = action.payload.amount;
+            let setAmountCandyIndex = cart.findIndex((item) => item.id === setAmountCandy.id);
+            cart.splice(setAmountCandyIndex, 1, setAmountCandy);
+            return {
+                ...state,
+                cart: [...cart]
+            }
         case "FILL_STOCK":
             return {
                 ...state,

@@ -12,3 +12,8 @@ export const fillStock = (candies) => ({
     type: "FILL_STOCK",
     payload: candies
 });
+
+export const manuallySetAmount = (candy, amount) => ({
+    type: "MANUALLY_SET_AMOUNT",
+    payload: {candy, amount}
+});

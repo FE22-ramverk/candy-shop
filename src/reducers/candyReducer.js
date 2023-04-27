@@ -23,7 +23,14 @@ const candyReducer = (state = candyStore, action) => {
         case "REMOVE_CANDY":
             let candyToRemove = action.payload;
             let index = cart.findIndex((cartItem) => cartItem.id === candyToRemove.id)
-            cart.splice(index, 1);
+            if (candyToRemove.amount > 1) {
+                // om det finns fler än en av denna godissort skall vi bara minusa mängden
+                cart[index].amount -= 1;
+            } else {
+                // om det bara finns en av denna godis skall den tas bort helt
+                cart.splice(index, 1);
+            }
+
             return {
                 ...state,
                 cart: [...cart]

@@ -10,14 +10,16 @@
     grid-template-areas: '. h1 icon';
     align-items: center;
     @include box-shadowing;
-
+a {
+    grid-area: h1;
     h1 {
         @include reset-user-agent-margins;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.224);
-        grid-area: h1;
         color: white;
         font-size: 1.8rem;
     }
+}
+
 
     .cart {
         grid-area: icon;
@@ -25,7 +27,6 @@
             position: relative;
         }
         .cartCounter {
-            @include box-shadowing;
             border-radius: 50%;
             background-color: $primaryBlue;
             height: 1rem;

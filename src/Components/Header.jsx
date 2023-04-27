@@ -1,10 +1,10 @@
 import CartIcon from "./CartIcon";
 import style from "./Header.module.scss";
-
+import { Link } from "react-router-dom";
 function Header() {
     return ( 
         <header className={style.header}>
-            <h1>CANDY SHOP</h1>
+            <Link to="/"><h1>CANDY SHOP</h1></Link>
             <CartIcon />
         </header>
      );

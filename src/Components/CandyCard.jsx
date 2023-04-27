@@ -19,7 +19,7 @@ function CandyCard({ candy }) {
     return (
         <article className={style.card}>
             <Link to={"/candyinfo/" + candy.id}>
-                <img className={style.image} src={"/imgs/candy-" + candy.id + ".png"} alt="klubba" width="200px" height="200px" />
+                <img className={style.image} src={"/imgs/candy-" + candy.id + ".png"} alt="klubba" />
             </Link>
             <section className={style.firstrow}>
                 <h3>{candy.name}</h3>

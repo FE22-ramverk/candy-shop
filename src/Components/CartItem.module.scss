@@ -5,7 +5,7 @@
     justify-content: center;
     margin: auto;
     width: 80%;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 10vw 1fr 1fr;
     grid-template-areas: 'thumbnail info buttons';
     .thumbnail {
         grid-area: thumbnail;
@@ -15,6 +15,7 @@
         background-size: contain;
     }
     .info {
+        text-align: left;
         margin: auto;
         grid-area: info;
     }

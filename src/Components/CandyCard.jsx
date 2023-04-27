@@ -2,8 +2,10 @@ import { useDispatch } from "react-redux";
 import Button from "./Button";
 import { buyCandy } from "../actions/candyActions";
 import style from "./CandyCard.module.scss";
+import { useNavigate } from "react-router-dom";
 
 function CandyCard({ candy }) {
+    const navigate = useNavigate();
     const dispatch = useDispatch();
 
     function addCandyToCart() {
@@ -12,8 +14,8 @@ function CandyCard({ candy }) {
     }
 
     function navigateToCandyInfo() {
-        console.log(candy);
-    }
+        navigate('/candyinfo/' + candy.id + '/' + candy.name)
+    };
 
     return (
         <article className={style.card}>

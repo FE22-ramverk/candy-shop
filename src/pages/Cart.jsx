@@ -12,7 +12,7 @@ function Cart() {
 
     return (
         <main>
-            <p>CART</p>
+            <p>Your cart</p>
             {
                 cart && cart.map((cartItem, i) =>
                     <CartItem cartItem={cartItem} key={i} />)

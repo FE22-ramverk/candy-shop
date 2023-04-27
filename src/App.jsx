@@ -30,7 +30,7 @@ function App() {
         <Header />
         <Routes>
           <Route index element={<StartPage />} />
-          <Route path='/candyinfo/:id' element={<CandyInfo />} />
+          <Route path='/candyinfo/:id/:name' element={<CandyInfo />} />
           <Route path='/cart' element={<Cart />} />
         </Routes>
       </BrowserRouter>

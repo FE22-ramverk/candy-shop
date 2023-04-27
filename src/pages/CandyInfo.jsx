@@ -19,6 +19,7 @@ function CandyInfo() {
     }, [state]);
 
     function addCandyToCart() {
+        console.log(candy);
         // dispatcha actionen buyCandy
         dispatch(buyCandy(candy))
     };

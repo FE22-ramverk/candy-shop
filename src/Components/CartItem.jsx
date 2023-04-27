@@ -7,16 +7,17 @@ export default function CartItem({ cartItem }) {
     const dispatch = useDispatch();
     return (
         <article className={style.container}>
-            <p>{cartItem.amount}</p>
             <section className={style.itemImage}></section>
-            <section className={style.info}>
-                <h3>{cartItem.name}</h3>
-            </section>
-            <section className={style.buttons}>
-                <button onClick={() => dispatch(removeCandy(cartItem))}>-</button>
-                <input placeholder={cartItem.amount} onBlur={(e) => dispatch(manuallySetAmount(cartItem, e.target.value))} />
-                <button onClick={() => dispatch(buyCandy(cartItem))}>+</button>
-            </section>
+            <div className={style.wrapper}>
+                <section className={style.info}>
+                    <h3>{cartItem.name}</h3>
+                </section>
+                <section className={style.buttons}>
+                    <button onClick={() => dispatch(removeCandy(cartItem))}>-</button>
+                    <input placeholder={cartItem.amount} onBlur={(e) => dispatch(manuallySetAmount(cartItem, e.target.value))} />
+                    <button onClick={() => dispatch(buyCandy(cartItem))}>+</button>
+                </section>
+            </div>
         </article>
     )
 }

@@ -1,13 +1,29 @@
 @import "../variables";
+
 .container {
-    display: flex;
+    display: grid;
     justify-content: center;
-    .wrapper {
-        display: flex;
-        justify-content:space-between ;
+    margin: auto;
+    width: 80%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'thumbnail info buttons';
+    .thumbnail {
+        grid-area: thumbnail;
+        margin: auto;
+        width: 50px;
+        height: 50px;
+        background-size: contain;
     }
+    .info {
+        margin: auto;
+        grid-area: info;
+    }
+
     .buttons {
+        grid-area: buttons;
+        margin: auto;
         display: flex;
+
         button {
             background-color: $primaryBlue;
             border: none;
@@ -15,12 +31,15 @@
             font-weight: bold;
             margin: 0 0.2rem;
             width: 2rem;
+            height: 2rem;
             border-radius: 5px;
             font-size: 1.2rem;
         }
     }
+
     input {
         width: 1.5rem;
+        height: 1.6rem;
         text-align: center;
         outline: grey;
     }

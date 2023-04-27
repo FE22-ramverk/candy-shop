@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import CartItem from "../Components/CartItem";
 
 function Cart() {
     const [cart, setCart] = useState([]);
@@ -13,8 +14,8 @@ function Cart() {
         <main>
             <p>CART</p>
             {
-                cart && cart.map((cartItem) =>
-                    <p>{cartItem.name}</p>)
+                cart && cart.map((cartItem, i) =>
+                    <CartItem cartItem={cartItem} key={i} />)
             }
         </main>
     );

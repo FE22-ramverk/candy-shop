@@ -32,6 +32,7 @@ function StartPage() {
                     candies.map((candy) => <CandyCard key={candy.id} candy={candy} />)
                 }
             </section>
+            <section className={style.candyShopImage} style={{ backgroundImage: 'url(/imgs/candy-shop.png' }}></section>
         </main>
     );
 }

@@ -16,7 +16,6 @@ export default function CartItem({ cartItem }) {
                 <input placeholder={cartItem.amount} onBlur={(e) => dispatch(manuallySetAmount(cartItem, e.target.value))} />
                 <button onClick={() => dispatch(buyCandy(cartItem))}>+</button>
             </section>
-
         </article>
     )
 }

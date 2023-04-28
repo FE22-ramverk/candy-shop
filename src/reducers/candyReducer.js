@@ -2,6 +2,7 @@ import { candyStore } from "../store/candyStore";
 
 const candyReducer = (state = candyStore, action) => {
     let cart = [...state.cart];
+    let candies = [...state.candies];
     switch (action.type) {
         case "BUY_CANDY":
             // då vill vi returnera det nya statet efter att vi har utfört vad kunden vill
@@ -47,6 +48,19 @@ const candyReducer = (state = candyStore, action) => {
                 ...state,
                 cart: [...cart]
             }
+        case "CHANGE_CANDY":
+            let changedCandy = action.payload.candy;
+            let property = action.payload.property;
+            let newValue = action.payload.newValue;
+            changedCandy[property] = newValue;
+            console.log(changedCandy);
+
+            let candyToChangeIndex = candies.findIndex((candy) => candy.id === changedCandy.id);
+            candies[candyToChangeIndex] = changedCandy;
+            return {
+                ...state,
+                candies: [...candies]
+            };
         case "FILL_STOCK":
             return {
                 ...state,

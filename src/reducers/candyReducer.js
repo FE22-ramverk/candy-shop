@@ -52,10 +52,10 @@ const candyReducer = (state = candyStore, action) => {
                 ...state,
                 candies: [...action.payload]
             }
-        case "CHANGE_CANDY_NAME":
+        case "CHANGE_CANDY":
             let changedCandy = action.payload.candy;
-            changedCandy.name = action.payload.newName;
-            console.log(changedCandy);
+            let property = action.payload.property
+            changedCandy[property] = action.payload.newValue
             let indexOfCandyNameToChange = cart.findIndex((item) => item.id === changedCandy.id);
             cart.splice(indexOfCandyNameToChange, 1, changedCandy);
             // samma som: cart[indexOfCandyNameToChange] = changedCandy;

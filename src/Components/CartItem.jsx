@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
-import { buyCandy, changeCandyName, manuallySetAmount, removeCandy } from '../actions/candyActions';
+import { buyCandy, changeCandy, manuallySetAmount, removeCandy } from '../actions/candyActions';
 import style from "./CartItem.module.scss";
 import Button from './Button';
 
@@ -10,7 +10,7 @@ export default function CartItem({ cartItem }) {
     const dispatch = useDispatch();
 
     function handleChangeName() {
-        dispatch(changeCandyName(cartItem, newName));
+        dispatch(changeCandy(cartItem, "name", newName));
         setInputVisible(false);
     }
 

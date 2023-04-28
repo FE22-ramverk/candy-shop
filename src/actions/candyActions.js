@@ -18,7 +18,7 @@ export const manuallySetAmount = (candy, amount) => ({
     payload: {candy, amount}
 });
 
-export const changeCandyName = (candy, newName) => ({
-    type: "CHANGE_CANDY_NAME",
-    payload: {candy, newName}
+export const changeCandy = (candy, property, newValue) => ({
+    type: "CHANGE_CANDY",
+    payload: {candy, property, newValue}
 });

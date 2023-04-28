@@ -17,3 +17,8 @@ export const manuallySetAmount = (candy, amount) => ({
     type: "MANUALLY_SET_AMOUNT",
     payload: {candy, amount}
 });
+
+export const changeCandyName = (candy, newName) => ({
+    type: "CHANGE_CANDY_NAME",
+    payload: {candy, newName}
+});

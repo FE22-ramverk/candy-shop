@@ -11,3 +11,6 @@ $primaryBlue: #4cbbb9;
 @mixin box-shadowing {
     box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.094);
 }
+@mixin text-shadowing {
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.094);
+}
